@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import {
     AppBar,
     Toolbar,
@@ -24,7 +23,9 @@ import {
     Logout,
     Person,
     Settings,
+    AccountBalance,
 } from '@mui/icons-material';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/providers/KeycloakProvider';
 
 const Navbar: React.FC = () => {
@@ -142,6 +143,26 @@ const Navbar: React.FC = () => {
                         );
                     })}
                 </Box>
+
+                {/* PMB Button */}
+                <Button
+                    component="a"
+                    href="https://pmb.ro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    aria-label="Primaria Municipiului Bucuresti (opens in a new tab)"
+                    title="Primaria Municipiului Bucuresti"
+                    sx={{
+                        mr: 2,
+                        '&:hover': {
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        }
+                    }}
+                >
+                    <AccountBalance sx={{ mr: 1 }} />
+                    PMB
+                </Button>
 
                 {/* User Role Chip */}
                 <Chip
