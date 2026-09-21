@@ -1,0 +1,27 @@
+{
+  "task_id": "e1af5f8c-9367-43ef-affd-eb4b45eaa8ce",
+  "ticket_key": "EMPTCM-323",
+  "module_name": "Apply the new brand identity across the web app",
+  "criteria": [
+    "RouteOptimizer.Web/src/App.tsx contains '#800020', '#A3324A' and '#5C0017'.",
+    "RouteOptimizer.Web/src/App.tsx contains 'fontFamily' and 'Georgia'.",
+    "RouteOptimizer.Web/src/App.tsx does NOT contain '#1976d2', '#42a5f5' or '#1565c0'.",
+    "RouteOptimizer.Web/src/App.tsx still contains '#dc004e' and '#f5f5f5': palette.secondary and palette.background are left untouched.",
+    "RouteOptimizer.Web/src/pages/LoginPage.tsx does NOT contain '#1976d2', '#42a5f5' or '#1565c0'.",
+    "RouteOptimizer.Web/src/pages/LoginPage.tsx contains '#800020' and 'linear-gradient(135deg': the gradients keep their structure, only the colours change.",
+    "RouteOptimizer.Web/src/components/common/Navbar.tsx contains 'AccountBalance'.",
+    "Navbar.tsx contains 'component=\"a\"'.",
+    "Navbar.tsx contains 'href=\"https://pmb.ro\"'.",
+    "Navbar.tsx contains 'target=\"_blank\"' and 'rel=\"noopener noreferrer\"'.",
+    "Navbar.tsx contains 'color=\"inherit\"'.",
+    "Navbar.tsx contains 'aria-label=\"Primaria Municipiului Bucuresti (opens in a new tab)\"' and 'title=\"Primaria Municipiului Bucuresti\"'.",
+    "Navbar.tsx does NOT contain 'window.open', 'variant=\"contained\"' or 'color=\"secondary\"'.",
+    "Navbar.tsx contains '#1976d2' exactly once: getRoleColor's traveller colour, which this ticket does not change.",
+    "Across every .ts and .tsx file under RouteOptimizer.Web/src, '#1976d2' appears only in Navbar.tsx.",
+    "`npm run type-check` and `npm run lint` in RouteOptimizer.Web both pass."
+  ],
+  "model": "open-mistral-nemo",
+  "test_file": "test_identity.py",
+  "generated_by": "S5 test-generation agent",
+  "generated_at": "2026-09-21T10:28:18+00:00"
+}
