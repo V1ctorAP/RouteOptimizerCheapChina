@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import {
     AppBar,
     Toolbar,
@@ -26,6 +25,7 @@ import {
     Settings,
     AccountBalance,
 } from '@mui/icons-material';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/providers/KeycloakProvider';
 
 const Navbar: React.FC = () => {
